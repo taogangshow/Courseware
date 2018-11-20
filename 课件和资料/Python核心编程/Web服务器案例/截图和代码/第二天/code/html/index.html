@@ -1,0 +1,15 @@
+from multiprocessing import Process
+
+def woker(num):
+	print("1111")
+	file = open("111.txt","w")
+	for i in range(11):
+		file.write(num)
+	file.close()
+
+def main():
+	p = Process(target=woker,args=("1111",))
+	p.start()
+
+if __name__ == "__main__":
+	main()
